@@ -74,7 +74,7 @@ const app = {
     init() {
         this.cacheDOM();
         this.bindEvents();
-        this.renderCategories();
+
         this.renderProducts(this.products);
     },
 
@@ -82,7 +82,7 @@ const app = {
         this.menuToggle = document.getElementById('menuToggle');
         this.closeMenu = document.getElementById('closeMenu');
         this.mobileMenu = document.getElementById('mobileMenu');
-        this.categoryScroller = document.getElementById('categoryScroller');
+        
         this.productGrid = document.getElementById('productGrid');
         
         this.modalOverlay = document.getElementById('productModalOverlay');
