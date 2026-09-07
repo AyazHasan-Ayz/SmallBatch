@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmallBatch | Source in Bulk. Buy with Confidence.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="#" class="brand-logo">
+                <img src="images/logo.png" alt="SmallBatch" class="logo-img">
+            </a>
+            
+            <nav class="desktop-nav">
+                <a href="#products">Products</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#for-buyers">For Buyers</a>
+                <a href="#for-suppliers">For Suppliers</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="btn btn-ghost hidden-mobile">Login</button>
+                <button class="btn btn-primary hidden-mobile">Browse Products</button>
+                <button class="mobile-menu-toggle" id="menuToggle" aria-label="Open Menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <img src="images/logo.png" alt="SmallBatch" class="logo-img">
+            <button class="close-menu" id="closeMenu">&times;</button>
+        </div>
+        <nav class="mobile-nav-links">
+            <a href="#products">Products</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#for-buyers">For Buyers</a>
+            <a href="#for-suppliers">For Suppliers</a>
+            <a href="#support">Support</a>
+        </nav>
+        <div class="mobile-nav-actions">
+            <button class="btn btn-primary w-100">Browse Products</button>
+            <button class="btn btn-outline w-100 mt-sm">Login</button>
+        </div>
+    </div>
+
+    <main>
+        <!-- HERO BILLBOARD SECTION -->
+        <section class="hero-billboard section-padding">
+            <div class="container">
+                <div class="billboard-wrapper">
+                    <img src="images/hero-banner.png" alt="SmallBatch Wholesale" class="billboard-img">
+                    <div class="billboard-actions">
+                        <button class="btn btn-primary btn-large">Browse Products</button>
+                        <button class="btn btn-outline btn-large bg-white">How It Works</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Strip -->
+        <div class="trust-strip">
+            <div class="container trust-container">
+                <span class="trust-item"><span class="check">✓</span> Verified Suppliers</span>
+                <span class="trust-item"><span class="check">✓</span> Flexible MOQs</span>
+                <span class="trust-item"><span class="check">✓</span> Sample Before Bulk</span>
+                <span class="trust-item"><span class="check">✓</span> Order Tracking</span>
+            </div>
+        </div>
+
+        <!-- Categories Scroller -->
+        <section class="categories section-padding">
+            <div class="container">
+                <h2 class="section-title">What are you sourcing?</h2>
+                <div class="category-scroller" id="categoryScroller">
+                    <!-- Injected via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Discovery -->
+        <section id="products" class="products section-padding bg-light">
+            <div class="container">
+                <div class="products-header">
+                    <h2 class="section-title">Find products that fit your quantity</h2>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search products, MOQs, or materials..." id="searchInput">
+                    </div>
+                </div>
+                
+                <div class="product-grid" id="productGrid">
+                    <!-- Injected via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW: Why Choose SmallBatch (Value Props) -->
+        <section class="features section-padding">
+            <div class="container">
+                <h2 class="section-title text-center">Built for growing clothing brands</h2>
+                <div class="features-grid mt-lg">
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Quality Assured</h3>
+                        <p>Every supplier undergoes strict quality checks. Order a sample first to feel the fabric before placing bulk orders.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏷️</div>
+                        <h3>White-Label & Custom</h3>
+                        <p>Need custom neck tags, screen printing, or embroidery? Many of our partners offer full customization.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏭</div>
+                        <h3>Direct Factory Pricing</h3>
+                        <p>Skip the middlemen. Source directly from top-tier manufacturers with transparent, tiered pricing based on your volume.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW: Featured Suppliers -->
+        <section class="suppliers section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title">Partnered with top manufacturers</h2>
+                <div class="supplier-grid mt-lg">
+                    <!-- Supplier 1 -->
+                    <div class="sup-profile-card">
+                        <div class="sup-cover"></div>
+                        <div class="sup-avatar-large">AF</div>
+                        <div class="sup-details">
+                            <h3>A.F. Garments <span class="check">✓</span></h3>
+                            <p class="sup-location">Tiruppur, India • Premium Apparel</p>
+                            <div class="sup-stats-row">
+                                <div><strong>4.9★</strong> Rating</div>
+                                <div><strong>250+</strong> Orders</div>
+                                <div><strong>100%</strong> On-Time</div>
+                            </div>
+                            <button class="btn btn-outline w-100 mt-sm">View Catalog</button>
+                        </div>
+                    </div>
+                    <!-- Supplier 2 -->
+                    <div class="sup-profile-card">
+                        <div class="sup-cover" style="background-color: #334155;"></div>
+                        <div class="sup-avatar-large">VG</div>
+                        <div class="sup-details">
+                            <h3>Velocity Garments <span class="check">✓</span></h3>
+                            <p class="sup-location">Delhi, India • Activewear</p>
+                            <div class="sup-stats-row">
+                                <div><strong>4.7★</strong> Rating</div>
+                                <div><strong>180+</strong> Orders</div>
+                                <div><strong>98%</strong> On-Time</div>
+                            </div>
+                            <button class="btn btn-outline w-100 mt-sm">View Catalog</button>
+                        </div>
+                    </div>
+                    <!-- Supplier 3 -->
+                    <div class="sup-profile-card">
+                        <div class="sup-cover" style="background-color: #0F172A;"></div>
+                        <div class="sup-avatar-large">LT</div>
+                        <div class="sup-details">
+                            <h3>Loom & Thread <span class="check">✓</span></h3>
+                            <p class="sup-location">Ludhiana, India • Winterwear</p>
+                            <div class="sup-stats-row">
+                                <div><strong>4.8★</strong> Rating</div>
+                                <div><strong>320+</strong> Orders</div>
+                                <div><strong>99%</strong> On-Time</div>
+                            </div>
+                            <button class="btn btn-outline w-100 mt-sm">View Catalog</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section id="how-it-works" class="how-it-works section-padding">
+            <div class="container">
+                <h2 class="section-title text-center">How sourcing works</h2>
+                <div class="steps-grid mt-lg">
+                    <div class="step-card">
+                        <span class="step-num">01</span>
+                        <h3>Discover</h3>
+                        <p>Find products that match your quantity and specifications perfectly.</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-num">02</span>
+                        <h3>Sample</h3>
+                        <p>Test the product quality before committing to a full bulk order.</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-num">03</span>
+                        <h3>Order</h3>
+                        <p>Place your bulk order securely through the SmallBatch platform.</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-num">04</span>
+                        <h3>Receive</h3>
+                        <p>Track your production and delivery status every step of the way.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW: CTA Banner -->
+        <section class="cta-banner">
+            <div class="container">
+                <div class="cta-box">
+                    <h2>Ready to scale your brand?</h2>
+                    <p>Join hundreds of Instagram brands and retailers sourcing with confidence.</p>
+                    <div class="cta-buttons">
+                        <button class="btn btn-primary btn-large" style="background: var(--white); color: var(--primary);">Start Browsing</button>
+                        <button class="btn btn-outline btn-large" style="border-color: rgba(255,255,255,0.3); color: var(--white);">Become a Supplier</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="images/logo.png" alt="SmallBatch" class="logo-img-footer">
+                <p>Source in Bulk. Buy with Confidence.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Buyer</h4>
+                <a href="#">Browse Products</a>
+                <a href="#">How It Works</a>
+                <a href="#">My Orders</a>
+                <a href="#">Support</a>
+            </div>
+            <div class="footer-links">
+                <h4>Supplier</h4>
+                <a href="#">Become a Supplier</a>
+                <a href="#">Supplier Login</a>
+                <a href="#">Guidelines</a>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Terms & Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Detail Modal -->
+    <div class="modal-overlay" id="productModalOverlay">
+        <div class="modal-content product-modal">
+            <button class="modal-close" id="closeProductModal">&times;</button>
+            <div class="modal-scroll-area" id="modalScrollArea">
+                <!-- Content injected via JS -->
+            </div>
+            <div class="mobile-sticky-cta" id="stickyCta">
+                <div class="price-summary">
+                    <span class="summary-label">Total Estimate</span>
+                    <strong class="summary-total" id="summaryTotal">₹0</strong>
+                </div>
+                <button class="btn btn-primary" onclick="app.showToast('Order flow initiated!')">Place Bulk Order</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
