@@ -14,20 +14,20 @@
     <!-- Header Navigation -->
     <header class="site-header">
         <div class="container header-container">
-            <a href="#" class="brand-logo">
+            <a href="#" class="brand-logo" onclick="window.scrollTo(0,0); return false;">
                 <img src="images/logo.png" alt="SmallBatch" class="logo-img">
             </a>
             
             <nav class="desktop-nav">
                 <a href="#products">Products</a>
                 <a href="#how-it-works">How It Works</a>
-                <a href="#for-buyers">For Buyers</a>
-                <a href="#for-suppliers">For Suppliers</a>
+                <a href="#products">For Buyers</a>
+                <a href="#suppliers">For Suppliers</a>
             </nav>
 
             <div class="header-actions">
-                <button class="btn btn-ghost hidden-mobile">Login</button>
-                <button class="btn btn-primary hidden-mobile">Browse Products</button>
+                <button class="btn btn-ghost hidden-mobile" onclick="app.showToast('Login portal coming soon!')">Login</button>
+                <button class="btn btn-primary hidden-mobile" onclick="window.location.href='#products'">Browse Products</button>
                 <button class="mobile-menu-toggle" id="menuToggle" aria-label="Open Menu">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
                 </button>
@@ -42,15 +42,15 @@
             <button class="close-menu" id="closeMenu">&times;</button>
         </div>
         <nav class="mobile-nav-links">
-            <a href="#products">Products</a>
-            <a href="#how-it-works">How It Works</a>
-            <a href="#for-buyers">For Buyers</a>
-            <a href="#for-suppliers">For Suppliers</a>
-            <a href="#support">Support</a>
+            <a href="#products" onclick="document.getElementById('mobileMenu').classList.remove('active');">Products</a>
+            <a href="#how-it-works" onclick="document.getElementById('mobileMenu').classList.remove('active');">How It Works</a>
+            <a href="#products" onclick="document.getElementById('mobileMenu').classList.remove('active');">For Buyers</a>
+            <a href="#suppliers" onclick="document.getElementById('mobileMenu').classList.remove('active');">For Suppliers</a>
+            <a href="javascript:void(0)" onclick="app.showToast('Support chat opening...'); document.getElementById('mobileMenu').classList.remove('active');">Support</a>
         </nav>
         <div class="mobile-nav-actions">
-            <button class="btn btn-primary w-100">Browse Products</button>
-            <button class="btn btn-outline w-100 mt-sm">Login</button>
+            <button class="btn btn-primary w-100" onclick="window.location.href='#products'; document.getElementById('mobileMenu').classList.remove('active');">Browse Products</button>
+            <button class="btn btn-outline w-100 mt-sm" onclick="app.showToast('Login portal coming soon!'); document.getElementById('mobileMenu').classList.remove('active');">Login</button>
         </div>
     </div>
 
@@ -61,8 +61,8 @@
                 <div class="billboard-wrapper">
                     <img src="images/hero-banner.png" alt="SmallBatch Wholesale" class="billboard-img">
                     <div class="billboard-actions">
-                        <button class="btn btn-primary btn-large">Browse Products</button>
-                        <button class="btn btn-outline btn-large bg-white">How It Works</button>
+                        <button class="btn btn-primary btn-large" onclick="window.location.href='#products'">Browse Products</button>
+                        <button class="btn btn-outline btn-large bg-white" onclick="window.location.href='#how-it-works'">How It Works</button>
                     </div>
                 </div>
             </div>
@@ -77,7 +77,6 @@
                 <span class="trust-item"><span class="check">✓</span> Order Tracking</span>
             </div>
         </div>
-        
 
         <!-- Product Discovery -->
         <section id="products" class="products section-padding bg-light">
@@ -95,7 +94,7 @@
             </div>
         </section>
 
-        <!-- NEW: Why Choose SmallBatch (Value Props) -->
+        <!-- Why Choose SmallBatch -->
         <section class="features section-padding">
             <div class="container">
                 <h2 class="section-title text-center">Built for growing clothing brands</h2>
@@ -119,8 +118,8 @@
             </div>
         </section>
 
-        <!-- NEW: Featured Suppliers -->
-        <section class="suppliers section-padding bg-light">
+        <!-- Featured Suppliers -->
+        <section id="suppliers" class="suppliers section-padding bg-light">
             <div class="container">
                 <h2 class="section-title">Partnered with top manufacturers</h2>
                 <div class="supplier-grid mt-lg">
@@ -136,7 +135,7 @@
                                 <div><strong>250+</strong> Orders</div>
                                 <div><strong>100%</strong> On-Time</div>
                             </div>
-                            <button class="btn btn-outline w-100 mt-sm">View Catalog</button>
+                            <button class="btn btn-outline w-100 mt-sm" onclick="app.showToast('Loading A.F. Garments catalog...')">View Catalog</button>
                         </div>
                     </div>
                     <!-- Supplier 2 -->
@@ -151,7 +150,7 @@
                                 <div><strong>180+</strong> Orders</div>
                                 <div><strong>98%</strong> On-Time</div>
                             </div>
-                            <button class="btn btn-outline w-100 mt-sm">View Catalog</button>
+                            <button class="btn btn-outline w-100 mt-sm" onclick="app.showToast('Loading Velocity Garments catalog...')">View Catalog</button>
                         </div>
                     </div>
                     <!-- Supplier 3 -->
@@ -166,7 +165,7 @@
                                 <div><strong>320+</strong> Orders</div>
                                 <div><strong>99%</strong> On-Time</div>
                             </div>
-                            <button class="btn btn-outline w-100 mt-sm">View Catalog</button>
+                            <button class="btn btn-outline w-100 mt-sm" onclick="app.showToast('Loading Loom & Thread catalog...')">View Catalog</button>
                         </div>
                     </div>
                 </div>
@@ -202,15 +201,15 @@
             </div>
         </section>
 
-        <!-- NEW: CTA Banner -->
+        <!-- CTA Banner -->
         <section class="cta-banner">
             <div class="container">
                 <div class="cta-box">
                     <h2>Ready to scale your brand?</h2>
                     <p>Join hundreds of Instagram brands and retailers sourcing with confidence.</p>
                     <div class="cta-buttons">
-                        <button class="btn btn-primary btn-large" style="background: var(--white); color: var(--primary);">Start Browsing</button>
-                        <button class="btn btn-outline btn-large" style="border-color: rgba(255,255,255,0.3); color: var(--white);">Become a Supplier</button>
+                        <button class="btn btn-primary btn-large" style="background: var(--white); color: var(--primary);" onclick="window.location.href='#products'">Start Browsing</button>
+                        <button class="btn btn-outline btn-large" style="border-color: rgba(255,255,255,0.3); color: var(--white);" onclick="app.showToast('Supplier onboarding opening soon!')">Become a Supplier</button>
                     </div>
                 </div>
             </div>
@@ -226,22 +225,22 @@
             </div>
             <div class="footer-links">
                 <h4>Buyer</h4>
-                <a href="#">Browse Products</a>
-                <a href="#">How It Works</a>
-                <a href="#">My Orders</a>
-                <a href="#">Support</a>
+                <a href="#products">Browse Products</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="javascript:void(0)" onclick="app.showToast('Please login to view orders')">My Orders</a>
+                <a href="javascript:void(0)" onclick="app.showToast('Support chat opening...')">Support</a>
             </div>
             <div class="footer-links">
                 <h4>Supplier</h4>
-                <a href="#">Become a Supplier</a>
-                <a href="#">Supplier Login</a>
-                <a href="#">Guidelines</a>
+                <a href="javascript:void(0)" onclick="app.showToast('Supplier onboarding opening soon!')">Become a Supplier</a>
+                <a href="javascript:void(0)" onclick="app.showToast('Login portal coming soon!')">Supplier Login</a>
+                <a href="javascript:void(0)" onclick="app.showToast('Opening guidelines document...')">Guidelines</a>
             </div>
             <div class="footer-links">
                 <h4>Company</h4>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-                <a href="#">Terms & Privacy</a>
+                <a href="javascript:void(0)" onclick="app.showToast('About us page coming soon')">About</a>
+                <a href="javascript:void(0)" onclick="app.showToast('Contact form opening...')">Contact</a>
+                <a href="javascript:void(0)" onclick="app.showToast('Opening terms & privacy policy...')">Terms & Privacy</a>
             </div>
         </div>
     </footer>
@@ -258,7 +257,7 @@
                     <span class="summary-label">Total Estimate</span>
                     <strong class="summary-total" id="summaryTotal">₹0</strong>
                 </div>
-                <button class="btn btn-primary" onclick="app.showToast('Order flow initiated!')">Place Bulk Order</button>
+                <button class="btn btn-primary" onclick="app.showToast('Order flow initiated! Moving to checkout.')">Place Bulk Order</button>
             </div>
         </div>
     </div>

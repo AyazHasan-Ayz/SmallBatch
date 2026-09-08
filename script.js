@@ -1,7 +1,5 @@
 // SMALLBATCH B2B MVP LOGIC
 const app = {
-    categories: ['Oversized T-Shirts', 'Hoodies', 'Polo T-Shirts', 'Activewear', 'Custom Apparel', 'Caps'],
-    
     products: [
         {
             id: 'p1',
@@ -74,7 +72,6 @@ const app = {
     init() {
         this.cacheDOM();
         this.bindEvents();
-
         this.renderProducts(this.products);
     },
 
@@ -82,7 +79,6 @@ const app = {
         this.menuToggle = document.getElementById('menuToggle');
         this.closeMenu = document.getElementById('closeMenu');
         this.mobileMenu = document.getElementById('mobileMenu');
-        
         this.productGrid = document.getElementById('productGrid');
         
         this.modalOverlay = document.getElementById('productModalOverlay');
@@ -103,12 +99,6 @@ const app = {
         });
 
         this.searchInput.addEventListener('input', (e) => this.handleSearch(e.target.value));
-    },
-
-    renderCategories() {
-        this.categoryScroller.innerHTML = this.categories.map(cat => 
-            `<button class="cat-card">${cat}</button>`
-        ).join('');
     },
 
     renderProducts(productsToRender) {
